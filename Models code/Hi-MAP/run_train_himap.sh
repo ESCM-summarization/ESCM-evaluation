@@ -1,0 +1,21 @@
+python train.py -data /home/mkrilov/Thesis/data/himap_prep_data \
+                -save_model model_himap_new500/himap_2 \
+		        -copy_attn -accum_count 5\
+		        -global_attention mlp \
+		        -word_vec_size 128 \
+		        -rnn_size 512  -layers 1 \
+		        -encoder_type brnn \
+		        -train_steps 20000 \
+		        -max_grad_norm 4 \
+		        -dropout 0. \
+		        -batch_size 2 \
+		        -optim adagrad \
+		        -learning_rate 0.15 \
+		        -adagrad_accumulator_init 0.1 \
+		        -reuse_copy_attn \
+		        -copy_loss_by_seqlength \
+		        -bridge \
+		        -seed 777 \
+		        -world_size 1  \
+		        -gpu_ranks 0 \
+		        -save_checkpoint_steps 2000

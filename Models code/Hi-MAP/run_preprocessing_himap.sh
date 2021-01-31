@@ -1,0 +1,12 @@
+python preprocess.py -train_src /home/mkrilov/Thesis/data/multi_news/multi-news-original-src-cleaned-no-newlinechar-word_tokenizer_500/train.src.cleaned.tokenized.truncated500 \
+                     -train_tgt /home/mkrilov/Thesis/data/multi_news/multi-news-original-src-cleaned-no-newlinechar-word_tokenizer_500/train.tgt.tokenized \
+                     -valid_src /home/mkrilov/Thesis/data/multi_news/multi-news-original-src-cleaned-no-newlinechar-word_tokenizer_500/val.src.cleaned.tokenized.truncated500 \
+                     -valid_tgt /home/mkrilov/Thesis/data/multi_news/multi-news-original-src-cleaned-no-newlinechar-word_tokenizer_500/val.tgt.tokenized \
+                     -save_data /home/mkrilov/Thesis/data/himap_prep_data \
+                     -src_seq_length 10000 \
+                     -tgt_seq_length 10000 \
+                     -src_seq_length_trunc 500 \
+                     -tgt_seq_length_trunc 300 \
+                     -dynamic_dict \
+                     -share_vocab \
+                     -max_shard_size 10000000
